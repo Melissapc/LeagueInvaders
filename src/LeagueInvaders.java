@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -6,8 +7,8 @@ import javax.swing.JPanel;
 
 public class LeagueInvaders  {
 	JFrame frame;
-	int width = 500;
-	int height = 800;
+	final static int width = 500;
+	final static int height = 800;
 	GamePanel g;
 
 	public static void main(String[] args) {
@@ -18,6 +19,7 @@ public class LeagueInvaders  {
 	LeagueInvaders() {
 		frame = new JFrame();
 		g = new GamePanel();
+		
 		setup();
 	}
 
