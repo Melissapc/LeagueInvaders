@@ -12,6 +12,6 @@ public class GameObject {
 		
 	}
 void draw(Graphics g){
-	g.fillRect(x,y, 100, 100);	
+	
 }
 }
