@@ -70,6 +70,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 
 	public void updateGameState() {
 		object.update();
+		object.manageEnemies();
 	}
 
 	public void updateEndState() {
@@ -86,7 +87,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 		g.setFont(spacefont);
 
 		g.setColor(Color.RED);
-		g.drawString("            press ENTER to start", 20, 300);
+		g.drawString(" press ENTER to start", 20, 300);
 
 		g.setFont(enterfont);
 		g.setColor(Color.GREEN);
@@ -110,42 +111,42 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("mouse dragged");
+		System.out.println("Mouse Dragged");
 
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("Mouse moved");
+		System.out.println("Mouse Moved");
 
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("mouse clicked");
+		System.out.println("Mouse Clicked");
 
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("mouse pressed");
+		System.out.println("Mouse Pressed");
 
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("mouse released");
+		System.out.println("Mouse Released");
 
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("mouse entered");
+		System.out.println("Mouse entered");
 
 	}
 
@@ -165,6 +166,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+
 		// TODO Auto-generated method stub
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			currentState++;
@@ -174,13 +176,13 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 			}
 
 		}
-		
-		if(e.getKeyCode()==KeyEvent.VK_SPACE){
-			
+
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+
+			object.addObject(new Projectile(rock.x, rock.y, 10, 10));
+
 		}
-			
-			
-		
+
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			rock.up = true;
 		}

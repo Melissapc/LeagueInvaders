@@ -12,7 +12,7 @@ public class LeagueInvaders  {
 	GamePanel g;
 
 	public static void main(String[] args) {
-		LeagueInvaders haha = new LeagueInvaders();
+		LeagueInvaders league = new LeagueInvaders();
 
 	}
 
