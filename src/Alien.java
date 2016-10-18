@@ -2,15 +2,19 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Alien extends GameObject {
-	Alien(int x, int y, int width, int height) {
 
+
+	Alien(int x, int y, int width, int height) {
+	super();
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
 	}
+	
 
 	void update() {
+		super.update();
 		y ++ ;
 		//to do:! the challenge part for league invaders pt 11 )
 	}

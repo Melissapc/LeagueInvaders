@@ -71,6 +71,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 	public void updateGameState() {
 		object.update();
 		object.manageEnemies();
+		object.checkCollision();
+		if(isAlive(rock)){
+			
+		}
 	}
 
 	public void updateEndState() {

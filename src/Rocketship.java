@@ -10,7 +10,8 @@ public class Rocketship extends GameObject {
 	final int speed = 5;
 
 	Rocketship(int x, int y, int width, int height) {
-
+		super();
+		
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -18,6 +19,9 @@ public class Rocketship extends GameObject {
 	}
 
 	void update() {
+		
+		super.update();
+
 		if (up) {
 			y -= speed;
 		}
