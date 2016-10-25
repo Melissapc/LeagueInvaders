@@ -74,7 +74,9 @@ public class ObjectManager {
 	}
 
 	public int getScore() {
+		
 		return score;
+
 	}
 
 	public void setScore(int s) {

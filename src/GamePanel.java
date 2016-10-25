@@ -72,8 +72,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 		object.update();
 		object.manageEnemies();
 		object.checkCollision();
-		if(isAlive(rock)){
-			
+		if(rock.isAlive==false){
+			currentState=END_STATE;
+			object.reset();
+			rock=new Rocketship(x,y);
 		}
 	}
 
@@ -109,7 +111,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener, Mo
 	public void drawEndState(Graphics g) {
 		g.setColor(Color.RED);
 		g.fillRect(0, 0, LeagueInvaders.width, LeagueInvaders.height);
-		g.drawString("Game Over", 60, 400);
+		g.setColor(Color.pink);
+		g.drawString("Game Over", 200, 400);
+		g.drawString("Score" + object.getScore(), 220, 300);
 	}
 
 	@Override
